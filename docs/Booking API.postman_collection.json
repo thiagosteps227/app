@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "accf920d-4857-477a-9f85-58dae52a2201",
+		"name": "Booking API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11255154"
+	},
+	"item": [
+		{
+			"name": "CREATE A PROPERTY",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"propertyName\": \"Solar\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/properties",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"properties"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startDate\": \"2025-04-01\",\n    \"endDate\": \"2025-04-20\",\n    \"guestName\": \"John Doe carlos 1\",\n    \"guestEmail\":\"email@email.com\",\n    \"propertyName\": \"Solar\"\n\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/bookings",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE BLOCK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startDate\": \"2025-02-15\",\n    \"endDate\": \"2025-02-20\",\n    \"propertyName\": \"Solar\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/blocks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"blocks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE booking details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startDate\": \"2025-04-01\",\n    \"endDate\": \"2025-04-19\",\n    \"guestName\": \"UPDATE again Doe\",\n    \"guestEmail\": \"thiago@gmail.com\",\n    \"status\": \"active\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/bookings/5f0dad4a-dad4-424e-879b-7ddc14ce7879",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookings",
+						"5f0dad4a-dad4-424e-879b-7ddc14ce7879"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel/ rebook a canceled  booking",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": \"inactive\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/bookings/862e0ae1-0778-43cf-a7f3-ccc68cc25d00",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookings",
+						"862e0ae1-0778-43cf-a7f3-ccc68cc25d00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE BLOCK",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startDate\": \"2024-02-25\",\n    \"endDate\": \"2024-02-28\",\n    \"propertyName\": \"Solar\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/blocks/7758768c-e8a2-4a87-92c4-2ca828380316",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"blocks",
+						"7758768c-e8a2-4a87-92c4-2ca828380316"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE booking",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startDate\": \"2024-02-18\",\n    \"endDate\": \"2024-02-20\",\n    \"guestName\": \"John Thiago Doe\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/bookings/90425e97-c772-4b2c-b249-bd15b03bbe49",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookings",
+						"90425e97-c772-4b2c-b249-bd15b03bbe49"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE BLOCK",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startDate\": \"2024-02-18\",\n    \"endDate\": \"2024-02-20\",\n    \"guestName\": \"John Thiago Doe\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/blocks/7758768c-e8a2-4a87-92c4-2ca828380316",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"blocks",
+						"7758768c-e8a2-4a87-92c4-2ca828380316"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET a booking",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startDate\": \"2024-02-18\",\n    \"endDate\": \"2024-02-20\",\n    \"guestName\": \"John Thiago Doe\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/bookings/af539f31-70bc-4328-8b6f-a69f608144ba",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookings",
+						"af539f31-70bc-4328-8b6f-a69f608144ba"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
